@@ -15,6 +15,8 @@ const Navbar = () => {
           <a href="#hero">Home</a>
           <a href="#services">Services</a>
           <a href="#clients">Clients</a>
+          <a href="#voices">Success Stories</a>
+
           <a href="#whyus">Why Us</a>
           <a href="#contact">Contact</a>
         </Menu>

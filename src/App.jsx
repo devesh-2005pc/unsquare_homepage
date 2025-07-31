@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import Clients from './components/Clients';
 import WhyUs from './components/WhyUs';
+import Voices from './components/Voices'; // ✅ NEW IMPORT
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -23,6 +24,7 @@ const AppInner = () => {
       <Services />
       <Clients />
       <WhyUs />
+      <Voices /> {/* ✅ Added the new page here */}
       <Contact />
       <Footer />
     </ThemeProvider>

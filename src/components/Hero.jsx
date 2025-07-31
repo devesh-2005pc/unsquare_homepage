@@ -3,18 +3,20 @@ import {
   Container,
   Headline,
   Subtext,
+  CTAWrap,
   CTA,
   Overlay,
   Blob,
   ScrollHint,
   ImageWrapper,
-  ContentWrap
+  ContentWrap,
+  BackgroundText
 } from './Hero.styles';
 
 import { motion } from 'framer-motion';
 import { FaChevronDown } from 'react-icons/fa';
 import { useTheme } from '../context/ThemeContext';
-import heroImage from '../assets/hero-image.png'; // Your illustration image
+import heroImage from '../assets/hero-image.png';
 
 const Hero = () => {
   const { theme } = useTheme();
@@ -23,6 +25,7 @@ const Hero = () => {
     <Container id="hero" theme={theme}>
       <Overlay />
       <Blob />
+      <BackgroundText>UNSQUARE</BackgroundText>
 
       <ContentWrap>
         <ImageWrapper
@@ -51,7 +54,7 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.8 }}
           >
             <Subtext theme={theme}>
-              Bold. Modern. Inspiring. Let’s build the future together.
+              Bold. Modern. Inspiring. Let’s build the future together — one pixel at a time.
             </Subtext>
           </motion.div>
 
@@ -60,7 +63,10 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 1.4 }}
           >
-            <CTA href="#services" theme={theme}>Explore Services</CTA>
+            <CTAWrap>
+              <CTA href="#services" theme={theme}>Explore Services</CTA>
+              <CTA href="#contact" theme={theme} >Let’s Collaborate</CTA>
+            </CTAWrap>
           </motion.div>
         </div>
       </ContentWrap>
